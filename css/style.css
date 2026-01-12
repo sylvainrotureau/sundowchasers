@@ -1,0 +1,67 @@
+/* Couleurs inspirées du logo Sundown Chasers */
+:root {
+    --primary: #FF5F1F; /* Orange vif du soleil */
+    --secondary: #E9DCC9; /* Blanc cassé / Vintage */
+    --bg-dark: #121212;
+    --text-light: #f5f5f5;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background: rgba(0,0,0,0.9);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo img { height: 70px; }
+
+.lang-switcher a { margin-left: 10px; text-decoration: none; }
+.lang-switcher img { width: 30px; border-radius: 4px; transition: 0.3s; }
+.lang-switcher img:hover { transform: translateY(-3px); box-shadow: 0 4px 8px rgba(255,95,31,0.5); }
+
+nav ul { display: flex; list-style: none; padding: 0; }
+nav ul li { margin-right: 25px; }
+nav ul li a { color: var(--text-light); text-decoration: none; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
+nav ul li a:hover { color: var(--primary); }
+
+/* Hero Section */
+.hero {
+    height: 80vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)), url('../img/hero-bg.jpg') center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero h1 { font-size: 4rem; margin: 0; color: var(--primary); text-shadow: 2px 2px 10px rgba(0,0,0,0.5); }
+.hero p { font-size: 1.5rem; font-style: italic; }
+
+.content-section { padding: 80px 10%; text-align: center; }
+.btn { background: var(--primary); color: white; padding: 12px 30px; border-radius: 30px; text-decoration: none; display: inline-block; margin-top: 20px; transition: 0.3s; }
+.btn:hover { background: #e55319; }
+
+footer { background: #080808; padding: 40px; text-align: center; border-top: 2px solid var(--primary); }
+footer a { color: var(--primary); text-decoration: none; font-size: 0.9rem; }
+
+/* Responsive Mobile */
+@media (max-width: 768px) {
+    header { flex-direction: column; }
+    nav ul { flex-wrap: wrap; justify-content: center; margin: 20px 0; }
+    .hero h1 { font-size: 2.5rem; }
+}
