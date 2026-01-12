@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        var userLang = navigator.language || navigator.userLanguage; 
+        if (userLang.startsWith('de')) {
+            window.location.href = "./de/index.html";
+        } else if (userLang.startsWith('fr')) {
+            window.location.href = "./fr/index.html";
+        } else {
+            window.location.href = "./en/index.html";
+        }
+    </script>
+</head>
+<body>
+</body>
+</html>
